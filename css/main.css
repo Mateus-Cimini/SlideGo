@@ -1,0 +1,22 @@
+body {
+  background: #fff;
+  color: #000;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark {
+  background: #121212;
+  color: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #121212;
+    color: #fff;
+  }
+
+  body.dark {
+    background: #fff;
+    color: #000;
+  }
+}
