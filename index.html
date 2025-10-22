@@ -1,27 +1,52 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
-  <link href="./css/main.css" rel="stylesheet">
-  <title>Slide Go</title>
-</head>
-<body>
-    <h1>SlideGo</h1>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link href="./css/main.css" rel="stylesheet">
+    <title>Slide Go</title>
+  </head>
+  <body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <a id="nav-title" href="#" class="navbar-brand">SlideGo</a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarHeader">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarHeader">
+              <ul class="navbar-nav mx-auto gap-3">
+                <li>
+                  <a href="#" class="nav-link">Home</a>
+                </li>
+                <li>
+                  <a href="#" class="nav-link">Sobre</a>
+                </li>
+                <li>
+                  <a href="#" class="nav-link">Suporte</a>
+                </li>
+              </ul>
+              <div class="d-flex ms-auto gap-2">
+                <button id="toggleTheme" type="button" class="btn btn-dark">
+                  <i id="iconTheme" class="bi bi-sun"></i>
+                </button>
+                <button id="addImage" type="button" class="btn ">
+                  <i class="bi bi-images"></i> Adicionar imagem
+                </button>
+              </div>
+            </div>
+          </div>
+        </nav>
+    </header>
 
 
-    <button id="toggleTheme" type="button" class="btn btn-dark">
-      <i id="iconTheme" class="bi bi-sun"></i></button>
 
-
-  <div class="container">
-  </div>
-
-
-  <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="./js/main.js"></script>
-</body>
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
 </html>
