@@ -6,7 +6,8 @@
   --secondary: #5ce1e6;
   --secondary-hover: #63faff;
   --accent: #ff4081;
-  --card: #151923;
+  --card: #0a0e1a;
+  --line: #5b5d83;
 }
 
 /* tema escuro */
@@ -17,7 +18,8 @@ body.dark {
   --secondary: #5ce1e6;
   --secondary-hover: #47bbbf;
   --accent: #ff79c6;
-  --card: #8fa1cf;
+  --card: #1a1f2e;
+  --line: #3f3f41;
 }
 
 * {
@@ -33,7 +35,7 @@ body {
 
 header {
   background-color: var(--primary);
-  border-bottom: 1px solid var(--card);
+  border-bottom: 2px solid var(--line);
 }
 
 .container-fluid a {
@@ -45,7 +47,7 @@ header {
   transition: transform 0.3s;
 }
 
-.navbar-brand:hover { 
+.navbar-brand:hover {
   transform: scale(1.1);
   color: var(--text);
 }
@@ -73,7 +75,6 @@ header {
   transform: scale(1.05);
 }
 
-
 /* Tema claro: padrão do Bootstrap (preto) */
 body.dark .navbar-toggler-icon {
   filter: invert(0);
@@ -82,6 +83,17 @@ body.dark .navbar-toggler-icon {
 /* Tema escuro: inverte para branco */
 body:not(.black) .navbar-toggler-icon {
   filter: invert(1);
+}
+
+.carousel,
+.carousel-inner,
+.carousel-item {
+  height: auto;
+}
+
+.carousel-item img {
+  display: block;
+  width: 100%;
 }
 
 #carouselHome {
@@ -97,8 +109,8 @@ body:not(.black) .navbar-toggler-icon {
 }
 
 .carousel-caption {
-  bottom: 10px;     
-  background: rgba(0,0,0,0.4);
+  bottom: 10px;
+  background: rgba(0, 0, 0, 0.4);
   padding: 5px 10px;
   border-radius: 5px;
 }
@@ -129,25 +141,46 @@ body:not(.black) .navbar-toggler-icon {
   background-color: #bb2d3b;
 }
 
-#cardsInfo .card {
-  max-width: 320px;
-  width: 100%;
+#cardsInfo {
+  margin-top: 2rem;
 }
+
+#cardsInfo .card {
+  width: 100%;
+  border: solid 2px var(--line);
+  background-color: var(--card);
+  color: var(--text);
+  padding: 10px;
+  transition: border-color 0.5s ease, transform 0.5s ease, background-color 0.9s ease;
+}
+
+
+#cardsInfo .card:hover {
+  border: solid 2px var(--secondary-hover);
+  background-color: #1d3131;
+  transform: translateY(-4px);
+}
+
+#cardsInfo .cardSalmon:hover {
+  border: solid 2px salmon;
+  background-color: rgb(29, 25, 24);
+  transform: translateY(-4px);
+}
+
 
 @media (min-width: 1200px) {
   .carousel-indicators {
-   bottom: -10px;
+    bottom: -10px;
   }
 }
 
 @media (max-width: 991px) {
   #navbarHeader ul {
     margin: 10px 0px;
-    border-top : 1px solid var(--card);
+    border-top: 1px solid var(--card);
     border-bottom: 1px solid var(--card);
   }
 }
-
 
 @media (min-width: 768px) and (max-width: 1199px) {
   #carouselHome {
