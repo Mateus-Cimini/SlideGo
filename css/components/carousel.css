@@ -4,6 +4,14 @@
   height: auto;
 }
 
+#carouselHome {
+  transition: 0.3s;
+}
+
+#carouselHome:hover {
+ filter: brightness(85%)
+}
+
 .carousel-item img {
   display: block;
   width: 100%;

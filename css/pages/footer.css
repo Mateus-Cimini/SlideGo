@@ -12,6 +12,12 @@ footer {
   gap: 8px;
 }
 
+.logoAndTitleFooter{
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
 .titleFooter p {
   color: var(--text);
 }
