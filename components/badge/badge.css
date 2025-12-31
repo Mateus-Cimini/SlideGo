@@ -1,0 +1,18 @@
+.custom-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border: solid 1px rgba(204, 204, 204, 0.4);
+  margin: 10px 0;
+  background-color: #111;
+  color: #fff;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.custom-badge i {
+  color: #5ce1e6;
+  font-size: 14px;
+}

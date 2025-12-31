@@ -85,6 +85,11 @@ body:not(.black) .navbar-toggler-icon {
   filter: invert(1);
 }
 
+#badge-container {
+  display: flex;
+  justify-content: center;
+}
+
 .carousel,
 .carousel-inner,
 .carousel-item {
@@ -358,6 +363,10 @@ body.dark .modal-body input:focus {
 
   .carousel-indicators {
     bottom: -60px;
+  }
+
+  #btnHome {
+   margin-top: 60px;
   }
 }
 
