@@ -141,6 +141,12 @@ body:not(.black) .navbar-toggler-icon {
   background-color: #bb2d3b;
 }
 
+#btnHome {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 #cardsInfo {
   margin-top: 2rem;
   padding-bottom: 40px;
@@ -312,6 +318,18 @@ footer {
   color: #fff;
   font-size: 14px;
   margin-bottom: 0;
+}
+
+body.dark #modalAddImage .modal-content{
+  background-color: var(--primary);
+  color: var(--text);
+}
+
+.modal-body input:focus,
+body.dark .modal-body input:focus {
+  border-color: var(--secondary-hover);
+
+  box-shadow: 0 0 0 2px rgba(0, 109, 128, 0.3);
 }
 
 @media (min-width: 1200px) {

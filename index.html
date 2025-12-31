@@ -44,7 +44,13 @@
               <button id="toggleTheme" type="button" class="btn btn-dark">
                 <i id="iconTheme" class="bi bi-sun"></i>
               </button>
-              <button id="addImage" type="button" class="btn">
+              <button
+                id="addImage"
+                type="button"
+                class="btn"
+                data-bs-toggle="modal"
+                data-bs-target="#modalAddImage"
+              >
                 <i class="bi bi-images"></i> Adicionar imagem
               </button>
             </div>
@@ -151,6 +157,18 @@
       </div>
     </div>
 
+    <div class="content" id="btnHome">
+      <button
+        id="addImage"
+        type="button"
+        class="btn"
+        data-bs-toggle="modal"
+        data-bs-target="#modalAddImage"
+      >
+        <i class="bi bi-images"></i> Adicionar imagem
+      </button>
+    </div>
+
     <div class="container">
       <div id="cardsInfo" class="mt-3 mt-md-5 mt-lg-5">
         <div class="row g-3 justify-content-center">
@@ -188,6 +206,59 @@
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal add imagem -->
+    <div
+      id="modalAddImage"
+      class="modal fade"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="titleModalAddImage"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 id="titleModalAddImage" class="modal-title fs-5">
+              Adicione sua imagem
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="inputTitle" class="col-form-label">Titulo:</label>
+                <input id="inputTitle" type="text" class="form-control" />
+              </div>
+              <div class="mb-3">
+                <label for="inputURLImage" class="col-form-label"
+                  >URL da imagem:</label
+                >
+                <input id="inputURLImage" type="url" class="form-control" />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success">
+              Adicionar imagem
+            </button>
+            <button
+              type="button"
+              class="btn btn-danger"
+              data-bs-dismiss="modal"
+            >
+              Fechar
+            </button>
           </div>
         </div>
       </div>
