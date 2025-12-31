@@ -1,0 +1,26 @@
+#cardsInfo {
+  margin-top: 2rem;
+  padding-bottom: 40px;
+}
+
+#cardsInfo .card {
+  width: 100%;
+  border: solid 2px var(--line);
+  background-color: var(--card);
+  color: var(--text);
+  padding: 10px;
+  transition: border-color 0.5s ease, transform 0.5s ease,
+    background-color 0.9s ease;
+}
+
+#cardsInfo .card:hover {
+  border: solid 2px var(--secondary-hover);
+  background-color: #1d3131;
+  transform: translateY(-4px);
+}
+
+#cardsInfo .cardSalmon:hover {
+  border: solid 2px salmon;
+  background-color: rgb(29, 25, 24);
+  transform: translateY(-4px);
+}

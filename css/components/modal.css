@@ -1,0 +1,12 @@
+body.dark #modalAddImage .modal-content,
+body.dark #modalHowAddImage .modal-content,
+body.dark #modalTimeImagesAdded .modal-content {
+  background-color: var(--primary);
+  color: var(--text);
+}
+
+.modal-body input:focus,
+body.dark .modal-body input:focus {
+  border-color: var(--secondary-hover);
+  box-shadow: 0 0 0 2px rgba(0, 109, 128, 0.3);
+}

@@ -1,0 +1,44 @@
+@media (min-width: 1200px) {
+  .carousel-indicators {
+    bottom: -10px;
+  }
+}
+
+@media (max-width: 991px) {
+  #navbarHeader ul {
+    margin: 10px 0px;
+    border-top: 1px solid var(--card);
+    border-bottom: 1px solid var(--card);
+  }
+
+  .footer-links {
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  #carouselHome {
+    max-height: 350px;
+  }
+
+  .carousel-indicators {
+    bottom: -60px;
+  }
+
+  #btnHome {
+   margin-top: 60px;
+  }
+}
+
+@media (max-width: 767px) {
+  #carouselHome {
+    width: 95%;
+  }
+  #carouselHome img {
+    height: 250px;
+  }
+
+  .carousel-indicators {
+    bottom: -10px;
+  }
+}

@@ -1,0 +1,11 @@
+#badge-container {
+  display: flex;
+  justify-content: center;
+}
+
+
+#btnHome {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,4 +1,4 @@
-import { createBadge } from "../components/badge/badge.js";
+import { createBadge } from "../../components/badge/badge.js";
 
 const totalCards = 5;
 const totalFavorites = 2;
