@@ -264,6 +264,90 @@
       </div>
     </div>
 
+    <!-- Modal de como adicionar imagem -->
+    <div
+      id="modalHowAddImage"
+      class="modal fade"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="titleModalHowAddImage"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="titleModalHowAddImage">
+              Como adicionar imagens?
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              Para adicionar uma nova imagem ao carrossel, clique no botão
+              “Adicionar imagem”. Em seguida, será aberto um modal onde você
+              deve preencher o título da imagem e a URL da imagem. Após conferir
+              as informações, clique no botão verde “Adicionar”. A imagem será
+              incluída automaticamente no carrossel.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-danger" data-bs-dismiss="modal">
+              Fechar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal sobre o tempo que as imagens ficam salvas -->
+    <div
+      id="modalTimeImagesAdded"
+      class="modal fade"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="titleModalTimeImagesAdded"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="titleModalTimeImagesAdded">
+              Por quanto tempo as imagensficam salvas?
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              As imagens adicionadas ao carrossel ficam salvas por tempo
+              indeterminado no navegador do usuário, utilizando o
+              <strong>IndexedDB</strong>. Isso significa que elas permanecem
+              disponíveis mesmo após fechar ou atualizar a página. As imagens só
+              serão removidas caso o usuário as exclua manualmente, limpe os
+              dados do navegador ou acesse o site em outro dispositivo ou
+              navegador diferente.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-danger" data-bs-dismiss="modal">
+              Fechar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <footer>
       <div class="container">
         <div class="row g-3">
@@ -280,11 +364,25 @@
           </div>
           <div class="titleFooter col-12 col-md-3">
             <h5>Suporte</h5>
-            <a href="#" class="btn">Como adicionar novas imagens</a>
-            <a href="#" class="btn"
+            <a
+              href="#"
+              class="btn"
+              data-bs-toggle="modal"
+              data-bs-target="#modalHowAddImage"
+              >Como adicionar novas imagens</a
+            >
+            <a
+              href="#"
+              class="btn"
+              data-bs-toggle="modal"
+              data-bs-target="#modalTimeImagesAdded"
               >Por quanto tempo as imagens ficam salvas?</a
             >
-            <a href="#" class="btn">Reporte bug</a>
+            <a
+              href="mailto:mateusmateus122333@exemplo.com?subject=Reportando bug do site (SlideGo)"
+              class="btn"
+              >Reporte bug</a
+            >
           </div>
           <div class="titleFooter col-12 col-md-3">
             <h5>Outros Projetos</h5>
