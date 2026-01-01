@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <link
       rel="stylesheet"
       href="/node_modules/bootstrap-icons/font/bootstrap-icons.css"
@@ -240,7 +241,7 @@
             ></button>
           </div>
           <div class="modal-body">
-            <form>
+            <form id="formAddImage">
               <div class="mb-3">
                 <label for="inputTitle" class="col-form-label">Titulo:</label>
                 <input id="inputTitle" type="text" class="form-control" />
@@ -254,7 +255,7 @@
             </form>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-success">
+            <button type="submit" class="btn btn-success" data-bs-dismiss="modal">
               Adicionar imagem
             </button>
             <button
