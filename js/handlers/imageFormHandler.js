@@ -2,6 +2,8 @@ import { validateImageForm } from "../validate.js";
 import { addImageCarousel } from "../components/carousel.js";
 import { realisticConfetti } from "../components/confetti.js";
 import { modalScrollPag } from "../components/modal.js";
+import { addImageToDB } from "../db/images.db.js";
+
 
 export function initImageForm(carousel) {
   $("#formAddImage").on("submit", function (e) {
@@ -16,15 +18,22 @@ export function initImageForm(carousel) {
       alert(result.message);
       return;
     }
-    addImageCarousel(carousel, title, url);
-    realisticConfetti();
+
+    addImageToDB({title, url})
+    .then((id) => {
+      addImageCarousel(carousel, id, title, url);
+      realisticConfetti();
+      modalScrollPag();
+      console.log('imagem salva com sucesso com id:', id);
+    })
+    .catch((err) => {
+      console.error('erro ao salvar imagem', err)
+    })
 
     // limpa inputs modal
     $("#inputTitle").val("");
     $("#inputURLImage").val("");
 
-    //rola a pag
-    modalScrollPag();
   });
 
   $(".btn-success").on("click", function () {
