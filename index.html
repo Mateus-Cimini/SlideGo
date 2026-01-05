@@ -21,8 +21,9 @@
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
           <a id="nav-title" href="#" class="navbar-brand">
-            <img src="/assets/img/logoSlideGo.png" alt="logo" height="50px">
-            SlideGo</a>
+            <img src="/assets/img/logoSlideGo.png" alt="logo" height="50px" />
+            SlideGo</a
+          >
           <button
             type="button"
             class="navbar-toggler"
@@ -217,6 +218,114 @@
       </div>
     </div>
 
+    <!-- TOASTS -->
+
+    <button type="button" class="btn btn-info" id="liveToastAdd">
+      toast ADD
+    </button>
+
+    <button type="button" class="btn btn-warning" id="liveToastEdit">
+      toast EDIT
+    </button>
+
+    <button type="button" class="btn btn-danger" id="liveToastDelete">
+      toast DELETE
+    </button>
+
+    <!-- toast de add -->
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+      <div
+        id="toastAdd"
+        class="toast text-bg-success"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+      >
+        <div class="toast-header bg-success text-white">
+          <img
+            src="/assets/img/logoSlideGo.png"
+            height="30"
+            class="rounded me-2"
+          />
+          <strong class="me-auto">SlideGo</strong>
+          <small class="toast-time"></small>
+          <button
+            type="button"
+            class="btn-close btn-close-white"
+            data-bs-dismiss="toast"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="toast-body">
+          Imagem <strong class="toast-title"></strong> adicionada com sucesso.
+        </div>
+      </div>
+    </div>
+
+    <!-- toast de edit -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+      <div
+        id="toastEdit"
+        class="toast text-bg-warning"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+      >
+        <div class="toast-header bg-warning text-white">
+          <img
+            src="/assets/img/logoSlideGo.png"
+            height="30px"
+            alt="..."
+            class="rounded me-2"
+          />
+          <strong class="me-auto">SlideGo</strong>
+          <small class="toast-time text-muted"></small>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="toast"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="toast-body">
+          Imagem <strong class="toast-title"></strong> editada com sucesso.
+        </div>
+      </div>
+    </div>
+
+    <!-- toast de delete -->
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+      <div
+        id="toastDelete"
+        class="toast text-bg-danger"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+      >
+        <div class="toast-header bg-danger text-white">
+          <img
+            src="/assets/img/logoSlideGo.png"
+            height="30px"
+            alt="..."
+            class="rounded me-2"
+          />
+          <strong class="me-auto">SlideGo</strong>
+          <small class="toast-time text-muted"></small>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="toast"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="toast-body">
+          Imagem <strong class="toast-title"></strong> apagada com sucesso.
+        </div>
+      </div>
+    </div>
+
     <!-- Modal add imagem -->
     <div
       id="modalAddImage"
@@ -255,7 +364,11 @@
             </form>
           </div>
           <div class="modal-footer">
-            <button type="submit" class="btn btn-success" data-bs-dismiss="modal">
+            <button
+              type="submit"
+              class="btn btn-success"
+              data-bs-dismiss="modal"
+            >
               Adicionar imagem
             </button>
             <button
@@ -359,7 +472,7 @@
         <div class="row g-3">
           <div class="titleFooter col-12 col-md-3">
             <div class="logoAndTitleFooter">
-              <img src="/assets/img/logoSlideGo.png" alt="logo" height="50px">
+              <img src="/assets/img/logoSlideGo.png" alt="logo" height="50px" />
               <h5><strong>Slide Go</strong></h5>
             </div>
             <p>

@@ -6,6 +6,7 @@ import {
 import { realisticConfetti } from "../components/confetti.js";
 import { modalScrollPag } from "../components/modal.js";
 import { addImageToDB, editImageFromDB } from "../db/images.db.js";
+import { toastAddImage, toastEditImage } from "../components/toast.js";
 
 export function initImageForm(carousel) {
   $("#modalAddImage").data("mode", "add");
@@ -32,6 +33,7 @@ export function initImageForm(carousel) {
           addImageCarousel(carousel, id, title, url);
           realisticConfetti();
           modalScrollPag();
+          toastAddImage(title);
           console.log("imagem salva com sucesso com id:", id);
         })
         .catch(console.error);
@@ -45,6 +47,7 @@ export function initImageForm(carousel) {
         .then((updated) => {
           const item = $(`.carousel-item[data-id="${id}"]`);
           updateImageCarousel(item, updated);
+          toastEditImage(title);
           console.log("imagem editada:", updated);
         })
         .catch(console.error);
