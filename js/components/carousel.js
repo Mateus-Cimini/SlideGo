@@ -42,6 +42,7 @@ export function deleteImageCarousel(itemClicked, carouselEl) {
   const $prev = itemClicked.prev(".carousel-item");
 
   itemClicked.fadeOut(300, function () {
+    console.log("deletando", itemClicked)
     $(this).remove();
 
     const $items = $inner.find(".carousel-item");

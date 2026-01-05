@@ -1,6 +1,4 @@
 
-
-
 let db;
 
 export function withDB(callback) {

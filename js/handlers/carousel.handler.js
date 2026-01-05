@@ -2,6 +2,7 @@ import {
   editImageCarousel,
   deleteImageCarousel,
 } from "../components/carousel.js";
+import { deleteImageFromDB, editImageFromDB } from "../db/images.db.js";
 
 export function initCarouselHandlers(carousel) {
   $(carousel).on("click", ".btn-warning", function () {
@@ -11,7 +12,18 @@ export function initCarouselHandlers(carousel) {
 
   $(carousel).on("click", ".btn-danger", function () {
     const itemClicked = $(this).closest(".carousel-item");
-    console.log(itemClicked);
-    deleteImageCarousel(itemClicked, carousel);
+    const id = Number(itemClicked.data("id"));
+    deleteImageFromDB(id)
+      .then(() => {
+        deleteImageCarousel(itemClicked, carousel);
+      })
+      .catch(console.error);
   });
 }
+
+editImageFromDB(id, {
+  title: "titulo editado",
+  url: "https://picsum.photos/800/500",
+}).then((data) => {
+  console.log("Editado:", data);
+});
