@@ -1,6 +1,7 @@
 import { loadImagesFromDB } from  "../db/loadImagesDB.js";
 import { addImageCarousel } from "../components/carousel.js";
 
+
 export function initCarouselFromDB(carouselEl) {
   loadImagesFromDB()
     .then((images) => {

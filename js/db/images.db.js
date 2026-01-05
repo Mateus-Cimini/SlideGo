@@ -67,4 +67,17 @@ export function editImageFromDB(id, newData) {
   });
 }
 
+export function getImageFromDB(id) {
+  return new Promise((resolve, reject) => {
+    withDB((db) => {
+      const tx = db.transaction("imagens", "readonly");
+      const store = tx.objectStore("imagens");
+
+      const request = store.get(id);
+
+      request.onsuccess = (e) => resolve(e.target.result);
+      request.onerror = (e) => reject(e.target.error);
+    });
+  });
+}
 

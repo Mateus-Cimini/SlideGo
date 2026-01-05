@@ -97,3 +97,9 @@ export function toggleVisibility(carouselEl) {
   const hasItem = $carousel.find(".carousel-item").length > 0;
   $carousel.toggle(hasItem);
 }
+
+
+export function updateImageCarousel(item, data) {
+  item.find('h5').text(data.title);
+  item.find('img').attr('src', data.url)
+}

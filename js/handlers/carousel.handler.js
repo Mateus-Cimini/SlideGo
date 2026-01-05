@@ -3,11 +3,24 @@ import {
   deleteImageCarousel,
 } from "../components/carousel.js";
 import { deleteImageFromDB, editImageFromDB } from "../db/images.db.js";
+import { openEditModal } from "./modal.handlers.js";
+
+let currentEditId = null;
+let currentEditItem = null;
 
 export function initCarouselHandlers(carousel) {
   $(carousel).on("click", ".btn-warning", function () {
     const itemClicked = $(this).closest(".carousel-item");
-    editImageCarousel(itemClicked);
+    console.log ('id clicado:', itemClicked.data("id"));
+
+    currentEditId = Number(itemClicked.data("id"));
+    currentEditItem = itemClicked;
+
+    $("#modalAddimage")
+    .data("mode", "edit")
+    .data("id", currentEditId)
+
+    openEditModal(currentEditId);
   });
 
   $(carousel).on("click", ".btn-danger", function () {
@@ -20,10 +33,3 @@ export function initCarouselHandlers(carousel) {
       .catch(console.error);
   });
 }
-
-editImageFromDB(id, {
-  title: "titulo editado",
-  url: "https://picsum.photos/800/500",
-}).then((data) => {
-  console.log("Editado:", data);
-});
