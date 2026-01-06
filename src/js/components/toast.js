@@ -1,3 +1,5 @@
+import * as bootstrap from "bootstrap";
+
 const toastAdd = document.getElementById("toastAdd");
 const toastEdit = document.getElementById("toastEdit");
 const toastDelete = document.getElementById("toastDelete");

@@ -1,3 +1,5 @@
+import * as bootstrap from "bootstrap";
+
 import { validateImageForm } from "../validate.js";
 import {
   addImageCarousel,
@@ -26,6 +28,9 @@ export function initImageForm(carousel) {
     const modal = $("#modalAddImage");
     const mode = modal.data("mode");
 
+    console.log("MODE:", $("#modalAddImage").data("mode"));
+    console.log("ID:", $("#modalAddImage").data("id"));
+
     // ===== ADD =====
     if (mode === "add") {
       addImageToDB({ title, url })
@@ -52,11 +57,20 @@ export function initImageForm(carousel) {
         })
         .catch(console.error);
     }
+// limpa campos
+$("#inputTitle").val("");
+$("#inputURLImage").val("");
 
-    // limpa e fecha
-    $("#inputTitle").val("");
-    $("#inputURLImage").val("");
-    modal.modal("hide");
+// RESET O MODAL (ESSENCIAL)
+$("#modalAddImage")
+  .data("mode", "add")
+  .removeData("id");
+
+// fecha modal
+const modalEl = document.getElementById("modalAddImage");
+const modalInstance = bootstrap.Modal.getInstance(modalEl);
+modalInstance.hide();
+
   });
 
   $(".btn-success").on("click", function () {

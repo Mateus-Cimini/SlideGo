@@ -4,16 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="/node_modules/bootstrap-icons/font/bootstrap-icons.css"
-    />
-    <link
-      rel="stylesheet"
-      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
-    />
-    <link rel="stylesheet" href="/components/badge/badge.css" />
-    <link href="./css/main.css" rel="stylesheet" />
     <title>Slide Go</title>
   </head>
   <body>
@@ -21,7 +11,11 @@
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
           <a id="nav-title" href="#" class="navbar-brand">
-            <img src="/assets/img/logoSlideGo.png" alt="logo" height="50px" />
+            <img
+              src="/src/assets/img/logoSlideGo.png"
+              alt="logo"
+              height="50px"
+            />
             SlideGo</a
           >
           <button
@@ -86,63 +80,7 @@
             data-bs-slide-to="2"
           ></button>
         </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="btnsImg">
-              <button class="btn btn-warning btn-sm">
-                <i class="bi bi-pencil"></i>
-              </button>
-              <button class="btn btn-danger btn-sm">
-                <i class="bi bi-trash"></i>
-              </button>
-            </div>
-
-            <img
-              src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Yunara_0.jpg"
-              class="d-block w-100"
-            />
-            <div class="carousel-caption d-block">
-              <h5>Titulo da imagem</h5>
-            </div>
-          </div>
-
-          <div class="carousel-item">
-            <div class="btnsImg">
-              <button id="btnEdit" class="btn btn-warning btn-sm">
-                <i class="bi bi-pencil"></i>
-              </button>
-              <button id="btnDelete" class="btn btn-danger btn-sm">
-                <i class="bi bi-trash"></i>
-              </button>
-            </div>
-
-            <img
-              src="https://preview.redd.it/wild-rift-nidalee-updated-splash-v0-7qvw30cvn3uf1.jpeg?width=1080&crop=smart&auto=webp&s=ef8727497239cc9293d9b60eb763297ccf57d3af"
-              class="d-block w-100"
-            />
-            <div class="carousel-caption d-block">
-              <h5>Titulo da imagem</h5>
-            </div>
-          </div>
-
-          <div class="carousel-item">
-            <div class="btnsImg">
-              <button class="btn btn-warning btn-sm">
-                <i class="bi bi-pencil"></i>
-              </button>
-              <button class="btn btn-danger btn-sm">
-                <i class="bi bi-trash"></i>
-              </button>
-            </div>
-            <img
-              src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Qiyana_0.jpg"
-              class="d-block w-100"
-            />
-            <div class="carousel-caption d-block">
-              <h5>Titulo da imagem</h5>
-            </div>
-          </div>
-        </div>
+        <div class="carousel-inner"></div>
         <button
           type="button"
           class="carousel-control-prev"
@@ -220,18 +158,6 @@
 
     <!-- TOASTS -->
 
-    <button type="button" class="btn btn-info" id="liveToastAdd">
-      toast ADD
-    </button>
-
-    <button type="button" class="btn btn-warning" id="liveToastEdit">
-      toast EDIT
-    </button>
-
-    <button type="button" class="btn btn-danger" id="liveToastDelete">
-      toast DELETE
-    </button>
-
     <!-- toast de add -->
 
     <div class="toast-container position-fixed bottom-0 end-0 p-3">
@@ -244,7 +170,7 @@
       >
         <div class="toast-header bg-success text-white">
           <img
-            src="/assets/img/logoSlideGo.png"
+            src="/src/assets/img/logoSlideGo.png"
             height="30"
             class="rounded me-2"
           />
@@ -274,7 +200,7 @@
       >
         <div class="toast-header bg-warning text-white">
           <img
-            src="/assets/img/logoSlideGo.png"
+            src="/src/assets/img/logoSlideGo.png"
             height="30px"
             alt="..."
             class="rounded me-2"
@@ -306,7 +232,7 @@
       >
         <div class="toast-header bg-danger text-white">
           <img
-            src="/assets/img/logoSlideGo.png"
+            src="/src/assets/img/logoSlideGo.png"
             height="30px"
             alt="..."
             class="rounded me-2"
@@ -472,7 +398,11 @@
         <div class="row g-3">
           <div class="titleFooter col-12 col-md-3">
             <div class="logoAndTitleFooter">
-              <img src="/assets/img/logoSlideGo.png" alt="logo" height="50px" />
+              <img
+                src="/src/assets/img/logoSlideGo.png"
+                alt="logo"
+                height="50px"
+              />
               <h5><strong>Slide Go</strong></h5>
             </div>
             <p>
@@ -587,9 +517,6 @@
       </div>
     </footer>
 
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script type="module" src="./js/main.js"></script>
-    <script type="module" src="/js/components/badgeInit.js"></script>
+    <script type="module" src="/src/main.js"></script>
   </body>
 </html>
