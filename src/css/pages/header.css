@@ -1,21 +1,26 @@
-header {
-  background-color: var(--primary);
+header .navbar {
+  background-color: var(--primary) !important;
   border-bottom: 2px solid var(--line);
 }
 
-.container-fluid a {
-  color: var(--text);
+
+.navbar .nav-link {
+  color: var(--text) !important;
 }
 
-.navbar-brand {
-  font-weight: 600;
-  transition: transform 0.3s;
+.navbar .nav-link:hover {
+  color: var(--secondary) !important;
 }
 
-.navbar-brand:hover {
+.navbar .navbar-brand {
+  color: var(--text) !important;
+}
+
+.navbar .navbar-brand:hover {
   transform: scale(1.1);
-  color: var(--text);
+  color: var(--text) !important;
 }
+
 
 .navbar-nav .nav-link {
   font-weight: 500;
@@ -40,12 +45,10 @@ header {
   transform: scale(1.05);
 }
 
-/* Tema claro: padrão do Bootstrap (preto) */
 body.dark .navbar-toggler-icon {
-  filter: invert(0);
+  filter: invert(1);
 }
 
-/* Tema escuro: inverte para branco */
-body:not(.black) .navbar-toggler-icon {
-  filter: invert(1);
+body:not(.dark) .navbar-toggler-icon {
+  filter: invert(0);
 }

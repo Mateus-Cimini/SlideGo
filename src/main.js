@@ -1,4 +1,7 @@
 // libs
+import * as bootstrap from "bootstrap";
+window.bootstrap = bootstrap;
+
 import $ from "jquery";
 window.$ = $;
 window.jQuery = $;
@@ -24,6 +27,18 @@ const icon = document.getElementById("iconTheme");
 const carousel = document.getElementById("carouselHome");
 
 initThemeToggle(btn, body, icon);
+
+const nav = document.getElementById("navbarHeader");
+const btnMenu = document.getElementById("btnNavbar");
+
+const collapse = bootstrap.Collapse.getOrCreateInstance(nav, {
+  toggle: false
+});
+
+btnMenu.addEventListener("click", () => {
+  collapse.toggle();
+});
+
 
 $(function () {
   initImageForm(carousel);
