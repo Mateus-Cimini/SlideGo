@@ -81,3 +81,16 @@ export function getImageFromDB(id) {
   });
 }
 
+export function getAllImagesFromDB() {
+  return new Promise((resolve, reject) => {
+    withDB((db) => {
+      const tx = db.transaction("imagens", "readonly");
+      const store = tx.objectStore("imagens");
+
+      const request = store.getAll();
+
+      request.onsuccess = (e) => resolve(e.target.result);
+      request.onerror = (e) => reject(e.target.error);
+    });
+  });
+}

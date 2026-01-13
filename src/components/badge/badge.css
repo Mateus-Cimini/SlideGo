@@ -16,3 +16,12 @@
   color: #5ce1e6;
   font-size: 14px;
 }
+
+.fade-badge {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.fade-badge.show {
+  opacity: 1;
+}

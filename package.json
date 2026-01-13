@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:chrome": "vite & cmd.exe /C start chrome http://localhost:5173",
     "build": "vite build",
     "preview": "vite preview"
   },

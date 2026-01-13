@@ -1,28 +1,58 @@
-import { createBadge } from "../../components/badge/badge.js";
+import { showBadge } from "../../components/badge/badge.js";
+import { showGalleryBadge } from "./badgeFromDB.js";
 
-const totalCards = 5;
-const totalFavorites = 2;
+// badges de ação
 
-createBadge({
-  phrases: [
-    `${totalCards} cards adicionados`,
-    `${totalFavorites} favoritos ativos`,
-    "Keep going 🚀",
+document.addEventListener("image:add", () => {
+  showBadge(
+    [
+      "Imagem adicionada com sucesso",
+      "Nova imagem salva",
+      "Upload concluído",
+      "Imagem adicionada à galeria",
+    ],
+    {
+      target: "#badge-container",
+    }
+  );
+});
 
-    "Imagem adicionada com sucesso",
-    "Nova imagem salva",
-    "Imagem adicionada à galeria",
-    "Upload de imagem concluído",
+document.addEventListener("image:edit", () => {
+  showBadge(
+    [
+      "Imagem editada com sucesso",
+      "Alterações salvas",
+      "Imagem atualizada",
+      "Edição concluída",
+      "Dados da imagem atualizados",
+      "Imagem modificada",
+      "Atualização realizada",
+      "Edição salva com sucesso",
+    ],
+    {
+      target: "#badge-container",
+    }
+  );
+});
 
-    "Imagem editada com sucesso",
-    "Alterações salvas na imagem",
-    "Imagem atualizada",
-    "Edição concluída",
+document.addEventListener("image:delete", () => {
+  showBadge(
+    [
+      "Imagem removida com sucesso",
+      "Imagem excluída da galeria",
+      "Remoção concluída",
+      "Imagem apagada",
+      "Imagem deletada com sucesso",
+      "Imagem removida do carousel",
+      "Item excluído",
+      "Imagem descartada",
+    ],
+    {
+      target: "#badge-container",
+    }
+  );
+});
 
-    "Imagem removida com sucesso",
-    "Imagem excluída",
-    "Imagem apagada da galeria",
-    "Remoção concluída",
-  ],
-  target: "#badge-container",
+document.addEventListener("DOMContentLoaded", () => {
+  showGalleryBadge();
 });

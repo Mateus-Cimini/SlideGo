@@ -1,33 +1,48 @@
-export function createBadge({
-  phrases = [],
-  iconClass = 'bi bi-stars',
-  target = 'body',
-  random = true
-}) {
-  if (!phrases.length) return;
+let badgeEl = null;
+let hideTimeout = null;
 
-  const badge = document.createElement('div');
-  badge.className = 'custom-badge';
+export function showBadge(
+  text,
+  {
+    iconClass = "bi bi-stars",
+    target = "body",
+    duration = 8000,
+    random = true,
+  } = {}
+) {
+  const phrases = Array.isArray(text)
+    ? text[random ? Math.floor(Math.random() * text.length) : 0]
+    : text;
 
-  const icon = document.createElement('i');
-  icon.className = iconClass;
+  if (!badgeEl) {
+    badgeEl = document.createElement("div");
+    badgeEl.className = "custom-badge fade-badge";
 
-  const text = document.createElement('span');
+    const icon = document.createElement("i");
+    icon.className = iconClass;
 
-  const index = random
-    ? Math.floor(Math.random() * phrases.length)
-    : 0;
+    const span = document.createElement("span");
 
-  text.textContent = phrases[index];
+    badgeEl.append(icon, span);
 
-  badge.append(icon, text);
+    const container =
+      typeof target === "string" ? document.querySelector(target) : target;
 
-  const container =
-    typeof target === 'string'
-      ? document.querySelector(target)
-      : target;
-
-  if (container) {
-    container.appendChild(badge);
+    if (!container) return;
+    container.appendChild(badgeEl);
   }
+
+  badgeEl.querySelector("span").textContent = phrases;
+  badgeEl.querySelector('i').className = iconClass;
+
+
+  badgeEl.classList.remove("show");
+  void badgeEl.offsetWidth; // Trigger reflow
+  badgeEl.classList.add("show");
+
+  if (hideTimeout) clearTimeout(hideTimeout);
+
+  hideTimeout = setTimeout(() => {
+    badgeEl.classList.remove("show");
+  }, duration);
 }

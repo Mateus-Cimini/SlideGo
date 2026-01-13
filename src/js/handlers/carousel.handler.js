@@ -31,6 +31,7 @@ export function initCarouselHandlers(carousel) {
 
     getImageFromDB(id).then((image) => {
       toastDeleteImage(image.title);
+      document.dispatchEvent(new CustomEvent("image:delete")); // dispara evento para o badge
 
       deleteImageFromDB(id)
         .then(() => {

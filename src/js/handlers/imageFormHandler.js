@@ -39,6 +39,7 @@ export function initImageForm(carousel) {
           realisticConfetti();
           modalScrollPag();
           toastAddImage(title);
+          document.dispatchEvent(new CustomEvent("image:add")); // dispara evento para o badge
           console.log("imagem salva com sucesso com id:", id);
         })
         .catch(console.error);
@@ -53,6 +54,7 @@ export function initImageForm(carousel) {
           const item = $(`.carousel-item[data-id="${id}"]`);
           updateImageCarousel(item, updated);
           toastEditImage(title);
+          document.dispatchEvent(new CustomEvent("image:edit")); // dispara evento para o badge
           console.log("imagem editada:", updated);
         })
         .catch(console.error);

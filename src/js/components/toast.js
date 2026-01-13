@@ -12,11 +12,13 @@ export function toastAddImage(title) {
 export function toastEditImage(title) {
     toastEdit.querySelector(".toast-title").textContent = title
   showToastWithTime(toastEdit);
+  
 }
 
 export function toastDeleteImage(title) {
     toastDelete.querySelector(".toast-title").textContent = title
   showToastWithTime(toastDelete);
+  
 }
 
 
