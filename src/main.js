@@ -20,6 +20,7 @@ import { initImageForm } from "./js/handlers/imageFormHandler.js";
 import { initThemeToggle } from "./theme.js";
 import { initCarouselHandlers } from "./js/handlers/carousel.handler.js";
 import { initCarouselFromDB } from "./js/handlers/carouselInitHandlers.js";
+import { initEmailForm } from "./js/email.js";
 
 const body = document.body;
 const btn = document.getElementById("toggleTheme");
@@ -48,4 +49,5 @@ $(function () {
   initImageForm(carousel);
   initCarouselHandlers(carousel);
   initCarouselFromDB(carousel);
+  initEmailForm();
 });
