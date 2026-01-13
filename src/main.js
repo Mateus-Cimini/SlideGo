@@ -17,7 +17,7 @@ import "./components/badge/badge.css";
 // js do projeto
 import "./js/components/badgeInit.js";
 import { initImageForm } from "./js/handlers/imageFormHandler.js";
-import { initThemeToggle } from "./js/lightanddark.js";
+import { initThemeToggle } from "./theme.js";
 import { initCarouselHandlers } from "./js/handlers/carousel.handler.js";
 import { initCarouselFromDB } from "./js/handlers/carouselInitHandlers.js";
 
@@ -26,7 +26,11 @@ const btn = document.getElementById("toggleTheme");
 const icon = document.getElementById("iconTheme");
 const carousel = document.getElementById("carouselHome");
 
-initThemeToggle(btn, body, icon);
+initThemeToggle(
+  document.getElementById("toggleTheme"),
+  document.body,
+  document.getElementById("iconTheme")
+);
 
 const nav = document.getElementById("navbarHeader");
 const btnMenu = document.getElementById("btnNavbar");
