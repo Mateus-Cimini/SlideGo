@@ -45,10 +45,4 @@ header .navbar {
   transform: scale(1.05);
 }
 
-body.dark .navbar-toggler-icon {
-  filter: invert(1);
-}
 
-body:not(.dark) .navbar-toggler-icon {
-  filter: invert(0);
-}
