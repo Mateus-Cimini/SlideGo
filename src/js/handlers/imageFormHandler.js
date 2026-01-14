@@ -1,6 +1,8 @@
 import * as bootstrap from "bootstrap";
 
-import { validateImageForm } from "../validate.js";
+
+import {validateImageForm } from "../../utils/validate.js";
+
 import {
   addImageCarousel,
   updateImageCarousel,

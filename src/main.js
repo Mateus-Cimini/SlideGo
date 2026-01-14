@@ -11,16 +11,17 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 // css do projeto
-import "./css/main.css";
-import "./components/badge/badge.css";
+import "./styles/main.css";
+import "./styles/components/badge.css";
 
 // js do projeto
-import "./js/components/badgeInit.js";
-import { initImageForm } from "./js/handlers/imageFormHandler.js";
+import "./js/components/badge/badgeInit.js";
 import { initThemeToggle } from "./theme.js";
+import { initImageForm } from "./js/handlers/imageFormHandler.js";
 import { initCarouselHandlers } from "./js/handlers/carousel.handler.js";
 import { initCarouselFromDB } from "./js/handlers/carouselInitHandlers.js";
-import { initEmailForm } from "./js/email.js";
+import { initEmailForm } from "./js/services/email.js";
+
 
 const body = document.body;
 const btn = document.getElementById("toggleTheme");
@@ -49,5 +50,5 @@ $(function () {
   initImageForm(carousel);
   initCarouselHandlers(carousel);
   initCarouselFromDB(carousel);
-  initEmailForm();
+  initEmailForm()
 });

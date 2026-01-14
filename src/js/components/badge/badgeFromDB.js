@@ -1,8 +1,9 @@
-import { getAllImagesFromDB } from "../db/images.db.js";
+import { getAllImagesFromDB } from "../../db/images.db.js";
 import { showBadge } from "../../components/badge/badge.js";
 
 export async function showGalleryBadge() {
   const images = await getAllImagesFromDB();
+
   const total = images.length;
 
   if (total === 0) {
